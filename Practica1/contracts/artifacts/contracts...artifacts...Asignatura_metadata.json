@@ -1,0 +1,629 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_curso",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "msg",
+						"type": "string"
+					}
+				],
+				"name": "DNIrepetido",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "direccionProfesor",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "nombreProfesor",
+						"type": "string"
+					}
+				],
+				"name": "addProfesor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_DNI",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					}
+				],
+				"name": "automatricula",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_direccionAlumno",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_indiceEvaluacion",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Asignatura.tipoNota",
+						"name": "_nota",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_calificacion",
+						"type": "uint256"
+					}
+				],
+				"name": "califica",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "calificaciones",
+				"outputs": [
+					{
+						"internalType": "enum Asignatura.tipoNota",
+						"name": "tipo",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "calificacion",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cerrada",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cerrar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "coordinador",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nota",
+						"type": "uint256"
+					}
+				],
+				"name": "creaEvaluacion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "curso",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "datosAlumno",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "DNI",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "datosProfesor",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "evaluaciones",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fecha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nota",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "evaluacionesLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "matriculaLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "matriculas",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_indiceEvaluacion",
+						"type": "uint256"
+					}
+				],
+				"name": "miNota",
+				"outputs": [
+					{
+						"internalType": "enum Asignatura.tipoNota",
+						"name": "_tipo",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_calificacion",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nombre",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "profesores",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "profesoresLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "quienSoy",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_DNI",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_coordinador",
+						"type": "address"
+					}
+				],
+				"name": "setCoordinador",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addProfesor(address,string)": {
+					"params": {
+						"direccionProfesor": ": contiene la direccion del profesor",
+						"nombreProfesor": ": contiene el nombre del profesor."
+					}
+				},
+				"califica(address,uint256,uint8,uint256)": {
+					"params": {
+						"_calificacion": "calificaiom total del alumno",
+						"_direccionAlumno": "dirección del alumno",
+						"_indiceEvaluacion": "indice que oontiene la evaluación",
+						"_nota": "tipo de nota sacada "
+					}
+				},
+				"creaEvaluacion(string,uint256,uint256)": {
+					"params": {
+						"_fecha": "fecha de la evaluacion",
+						"_nombre": "nombre de la evaluacion",
+						"_nota": "nota que proporciona a la nota final"
+					}
+				},
+				"evaluacionesLength()": {
+					"returns": {
+						"_0": "El numero de evaluaciones creados."
+					}
+				},
+				"matriculaLength()": {
+					"returns": {
+						"_0": "El numero de alumnos creados."
+					}
+				},
+				"miNota(uint256)": {
+					"params": {
+						"_indiceEvaluacion": "Indice de una evaluacion en el array de evaluaciones. "
+					},
+					"returns": {
+						"_calificacion": "La calificacion que ha sacado el alumno.",
+						"_tipo": "        El tipo de nota que ha sacado el alumno."
+					}
+				},
+				"profesoresLength()": {
+					"returns": {
+						"_0": "El numero de profesores creados."
+					}
+				},
+				"quienSoy()": {
+					"returns": {
+						"_DNI": "el dni del alumno que invoca el metodo",
+						"_email": " El email del alumno que invoca el metodo.",
+						"_nombre": "El nombre del alumno que invoca el metodo."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"DNIrepetido(string)": [
+					{
+						"notice": "error personalizado DNI Existente"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"addProfesor(address,string)": {
+					"notice": "permite añadir un profesor a la asignatura. "
+				},
+				"automatricula(string,string,string)": {
+					"notice": "Se matricula un usuario "
+				},
+				"califica(address,uint256,uint8,uint256)": {
+					"notice": "Guardar las notas en un mapping doble (un mapping de un papping) llamado calificaciones.  El primer mapping tendrá como clave la direccion de un alumno, y el valor asociado será un segundo mapping.  Este segundo mapping tendrá como clave el índice de la evaluación, y devolverá la nota obtenida por el alumno en la evaluación.  "
+				},
+				"calificaciones(address,uint256)": {
+					"notice": "calificaciones de los alumnos"
+				},
+				"cerrada()": {
+					"notice": "indica si la asignatura se ha cerrado"
+				},
+				"cerrar()": {
+					"notice": "cerrar: permite cerrar una asignatura. "
+				},
+				"coordinador()": {
+					"notice": "dirección del coordinador de la asignatura"
+				},
+				"creaEvaluacion(string,uint256,uint256)": {
+					"notice": "crea una evaluacion  "
+				},
+				"curso()": {
+					"notice": "nombre del curso académico"
+				},
+				"datosAlumno(address)": {
+					"notice": "Acceder a los datos de un alumno dada su direccion."
+				},
+				"datosProfesor(address)": {
+					"notice": "mapa con las direcciones de usuario de profesor y nombres"
+				},
+				"evaluaciones(uint256)": {
+					"notice": "arrays de evaluaciones de Asignatura"
+				},
+				"evaluacionesLength()": {
+					"notice": "El numero de evaluaciones creados."
+				},
+				"matriculaLength()": {
+					"notice": "El numero de alumnos creados."
+				},
+				"matriculas(uint256)": {
+					"notice": "direcciones de alumnos"
+				},
+				"miNota(uint256)": {
+					"notice": "Devuelve el tipo de nota y la calificacion que ha sacado el alumno que invoca el metodo en  la evaluacion pasada como parametro. "
+				},
+				"nombre()": {
+					"notice": "nombre de la asignatura "
+				},
+				"owner()": {
+					"notice": "dirección del usuario que desplegó el contrato"
+				},
+				"profesores(uint256)": {
+					"notice": "direcciones de profesores"
+				},
+				"profesoresLength()": {
+					"notice": "El numero de profesores creados."
+				},
+				"quienSoy()": {
+					"notice": "Permite a un alumno obtener sus propios datos. "
+				},
+				"version()": {
+					"notice": "Version 2021 - Teoria"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Asignatura.sol": "Asignatura"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Asignatura.sol": {
+			"keccak256": "0xbc399519fe31a59c8ebce060e2d7a482b7c592ce36c879f3174f042bdb40c7a1",
+			"urls": [
+				"bzz-raw://92f47c9a419ea7078fc60b3b2dd72304be90a2158e977da75620134d464b59df",
+				"dweb:/ipfs/QmdRZ6DETvLJ8weLK72RQCNAJLabc1tSEMPV3m2QM7jtXd"
+			]
+		}
+	},
+	"version": 1
+}
